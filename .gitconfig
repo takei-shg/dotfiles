@@ -1,0 +1,32 @@
+[user]
+	name = takei.shg
+	email = takei.shg@gmail.com
+[github]
+	user = shtaag
+	token = 6556dea7fb8704d5c3a3028e3f7f6241
+[color]
+	ui = auto
+[core]
+	editor = /usr/bin/vim
+[alias]
+	adda = add -A
+	st = status
+	di = diff
+	dic = diff --cached
+	co = checkout
+	br = branch
+	cl = clone
+	clx = clean -dxf
+	ci = commit
+	cia = commit -a
+	cim = commit --amend
+	rbi = rebase -i
+	rbc = rebase --continue
+	rba = rebase --abort
+	rs = reset
+	rh = reset --hard
+	ra = remote add
+	rv = remote -v
+	ru = remote update --prune
+	log-all = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
+	la = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset' -10

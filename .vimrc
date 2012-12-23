@@ -1,0 +1,100 @@
+"vundle
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" for basis
+Bundle 'Shougo/vimproc'
+Bundle 'Shougo/unite.vim'
+Bundle 'Shougo/neocomplcache'
+" Bundle 'tpope/vim-surround'
+
+" for files
+Bundle 'Shougo/vimshell'
+Bundle 'Shougo/vimfiler'
+Bundle 'scrooloose/nerdtree'
+
+" for Syntastic
+"Bundle 'scrooloose/syntastic'
+
+" for Haskell
+Bundle 'eagletmt/ghci-vim'
+Bundle 'eagletmt/ghcmod-vim'
+Bundle 'eagletmt/unite-haddock'
+Bundle 'ujihisa/neco-ghc'
+Bundle 'ujihisa/unite-haskellimport'
+
+" for Coq
+Bundle 'eagletmt/coqtop-vim'
+
+" for xml
+Bundle 'mattn/zencoding-vim'
+
+filetype plugin indent on
+
+" bundle set
+let g:unite_enable_start_insert=1
+"" Disable AutoComplPop.
+let g:acp_enableAtStartup = 0
+"" Use neocomplcache.
+"let g:neocomplcache_enable_at_startup = 1
+"" Use smartcase.
+let g:neocomplcache_enable_smart_case = 1
+"" Use camel case completion.
+let g:neocomplcache_enable_camel_case_completion = 0
+"" Use underbar completion.
+let g:neocomplcache_enable_underbar_completion = 0
+"" Set minimum syntax keyword length.
+let g:neocomplcache_min_syntax_length = 5
+let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
+"" Define dictionary.
+let g:neocomplcache_dictionary_filetype_lists = {
+\ 'default' : '',
+\ 'vimshell' : $HOME.'/.vimshell_hist',
+\ 'scheme' : $HOME.'/.gosh_completions',
+\ 'php' : $HOME.'/.vim/dictionary/PHP.dict'
+\ }
+"" Enable heavy omni completion.
+if !exists('g:neocomplcache_omni_patterns')
+let g:neocomplcache_omni_patterns = {}
+endif
+
+" confs
+syntax on
+set showmatch
+set showmode
+set tabstop=4
+set autoindent
+set tags=tags
+set shiftwidth=4
+set ambiwidth=double
+let loaded_matchparen=1
+set backspace=indent,eol,start
+set hlsearch
+set fdm=marker
+set number
+set history=200
+set laststatus=2
+set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
+
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
+
+inoremap <C-j> <ESC>
+
+nnoremap <C-n> :bn<CR>
+nnoremap <C-p> :bp<CR>
+nmap <Esc><Esc> :nohlsearch<CR><Esc>
+
+nmap ,/ :s;^;//;<CR>:nohlsearch<CR>
+nmap ,\ :s;^\([\t ]*\);\1//;<CR>:nohlsearch<CR>
+nmap ,c :s;//;;<CR>:nohlsearch<CR>
+vmap ,/ :s;^;//;<CR>:nohlsearch<CR>
+vmap ,\ :s;^\([\t ]*\);\1//;<CR>:nohlsearch<CR>
+vmap ,c :s;//;;<CR>:nohlsearch<CR>
+
+set fileencodings=utf-8,sjis,cp932,euc-jp
