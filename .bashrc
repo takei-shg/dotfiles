@@ -24,6 +24,12 @@ alias s='gls $LS_OPTIONS -G'
 
 alias gitk='gitk --all &'
 
+# tmux
+alias tmux='tmuxx'
+alias tm='tmuxx'
+alias tma='tmux attach'
+alias tml='tmux list-window'
+
 export EDITOR=vim
 # export LSCOLORS=gxfxcxdxbxegedabagacad
 if [ -f /usr/local/etc/bash_completion ]; then
