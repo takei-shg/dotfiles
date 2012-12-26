@@ -31,6 +31,8 @@ alias tma='tmux attach'
 alias tml='tmux list-window'
 
 export EDITOR=vim
+# export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
+# alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 # export LSCOLORS=gxfxcxdxbxegedabagacad
 if [ -f /usr/local/etc/bash_completion ]; then
 	. /usr/local/etc/bash_completion

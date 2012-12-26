@@ -113,7 +113,7 @@ set fileencodings=utf-8,sjis,cp932,euc-jp
 " 2012/Dec/24 yuroyoro
 let g:Powerline_symbols = 'fancy'
 
-set clipboard+=unnamed
+set clipboard=unnamed,autoselect
 " unite
 nnoremap [unite] <Nop>
 nmap <Space>f [unite]
