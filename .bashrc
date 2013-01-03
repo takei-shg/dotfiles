@@ -38,7 +38,7 @@ if [ -f /usr/local/etc/bash_completion ]; then
 	. /usr/local/etc/bash_completion
 fi
 
-export JAVA_HOME=/usr
+# export JAVA_HOME=/usr
 export EC2_HOME=/Users/stakei/devel/ec2-api-tools-1.6.3.0
 
 export PATH=$PATH:$EC2_HOME/bin

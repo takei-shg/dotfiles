@@ -1,7 +1,11 @@
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
+export PATH=$PATH:$JAVA_HOME/bin
+export CATALINA_HOME=/usr/local/Cellar/tomcat/7.0.34/libexec
+export JAVA_OPTS='-Dfile.encoding=UTF-8'
 export SCALA_HOME=~/Developers/scala-2.8.1.final
 # export PATH=$PATH:~/Developers/play-1.1.1:$SCALA_HOME/bin
-export PATH=$PATH:~/Developers/play-2.0.2:$SCALA_HOME/bin
+# export PATH=$PATH:~/Developers/play-2.0.2:$SCALA_HOME/bin
+export PATH=$PATH:~/bin/play-2.0.4:$SCALA_HOME/bin
 # 2011/July/15 for android develop
 export PATH=$PATH:/Applications/android-sdk-mac_x86/tools
 # 2011/July/21 for Haskell
