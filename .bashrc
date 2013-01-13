@@ -42,3 +42,4 @@ fi
 export EC2_HOME=/Users/stakei/devel/ec2-api-tools-1.6.3.0
 
 export PATH=$PATH:$EC2_HOME/bin
+eval `opam config -env`
