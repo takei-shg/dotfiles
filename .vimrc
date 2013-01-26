@@ -38,6 +38,10 @@ Bundle 'altercation/vim-colors-solarized'
 " clipboard
 Bundle 'kana/vim-fakeclip'
 
+" Japanese-IME
+" im_control.vim is installed into .vim/plugin.
+" vundle cannot install im_control.vim.
+" Bundle 'fuenor/im_control.vim' 
 
 filetype plugin indent on
 
@@ -205,3 +209,10 @@ function! s:vimfiler_my_settings()
 	nmap <buffer> q <Plug>(vimfiler_exit)
 	nmap <buffer> Q <Plug>(vimfiler_hide)
 endfunction
+
+" im_control.vim
+" 「日本語入力固定モード」のvi協調モードを無効化
+" let IM_vi_CooperativeMode = 0
+" " 挿入モード終了時にIME状態を保存しない
+" inoremap <silent> <ESC> <ESC>:IMCtrl('Off')<CR>
+" inoremap <silent> <C-[> <ESC>:IMCtrl('Off')<CR>

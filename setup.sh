@@ -15,3 +15,5 @@ chmod +x $HOME/bin/tmuxx
 
 ln -s $HOME/dotfiles/tmux-pbcopy $HOME/bin/tmux-pbcopy
 chmod +x $HOME/bin/tmux-pbcopy
+
+# symlink should be made for vim_plugins
