@@ -34,7 +34,7 @@ Bundle 'mattn/zencoding-vim'
 
 " for tmux status line
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'altercation/vim-colors-solarized'
+" Bundle 'altercation/vim-colors-solarized'
 " clipboard
 Bundle 'kana/vim-fakeclip'
 
@@ -71,8 +71,8 @@ endif
 " confs
 syntax on
 set background=dark
-let g:solarized_termcolors=256
-colorscheme solarized
+" let g:solarized_termcolors=256
+" colorscheme solarized
 set showmatch
 set showmode
 set tabstop=4
@@ -111,7 +111,7 @@ vmap ,c :s;//;;<CR>:nohlsearch<CR>
 set fileencodings=utf-8,sjis,cp932,euc-jp
 
 " 2012/Dec/24 yuroyoro
-let g:Powerline_symbols = 'fancy'
+" let g:Powerline_symbols = 'fancy'
 
 set clipboard=unnamed,autoselect
 " unite
