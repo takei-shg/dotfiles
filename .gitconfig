@@ -8,6 +8,8 @@
 	ui = auto
 [core]
 	editor = /usr/bin/vim
+[push]
+  default = current
 [alias]
 	adda = add -A
 	st = status
