@@ -38,6 +38,14 @@ Bundle 'Lokaltog/vim-powerline'
 " clipboard
 Bundle 'kana/vim-fakeclip'
 
+" ctags
+Bundle 'vim-scripts/taglist.vim'
+Bundle 'majutsushi/tagbar'
+
+" Japanese-IME
+" im_control.vim is installed into .vim/plugin.
+" vundle cannot install im_control.vim.
+" Bundle 'fuenor/im_control.vim' 
 
 filetype plugin indent on
 
@@ -207,3 +215,39 @@ function! s:vimfiler_my_settings()
 	nmap <buffer> q <Plug>(vimfiler_exit)
 	nmap <buffer> Q <Plug>(vimfiler_hide)
 endfunction
+
+function! s:git_root_dir()
+    if(system('git rev-parse --is-inside-work-tree') == "true\n")
+        return ':VimFiler ' . system('git rev-parse --show-cdup') . '\<CR>'
+    else
+        echoerr '!!!current directory is outside git working tree!!!'
+    endif
+endfunction
+nnoremap <expr><Leader>fg <SID>git_root_dir()
+" im_control.vim
+" 「日本語入力固定モード」のvi協調モードを無効化
+" let IM_vi_CooperativeMode = 0
+" " 挿入モード終了時にIME状態を保存しない
+" inoremap <silent> <ESC> <ESC>:IMCtrl('Off')<CR>
+" inoremap <silent> <C-[> <ESC>:IMCtrl('Off')<CR>
+
+let Tlist_Use_Right_Window=1
+let Tlist_Enable_Fold_Column=0
+let Tlist_Show_One_File=1 " especially with this one
+let Tlist_Compact_Format=1
+let Tlist_Ctags_Cmd='/opt/local/bin/ctags'
+set updatetime=1000
+nmap ,t :!(cd %:p:h;ctags *)& " Maps the updates of tags to key ,t.
+set tags=tags; " The ';' at the end will cause the ctags plugin to search for current dir and above dirs until it find a tag file.
+
+nmap <F8> :TagbarToggle<CR>
+nnoremap <C-[> :pop<CR>
+
+" Add the following below if you want to generate ctags upon saving a file
+" " Auto-generate ctags upon making changes to a file
+autocmd BufWritePost *.erl :silent !(cd %:p:h;ctags *)&
+"
+" " If you want to auto compile (erlc) upon saving a file, then add that one
+" as well
+" " Run erlc on the file being saved
+" autocmd BufWritePost *.erl :!erlc <afile>
