@@ -1,0 +1,17 @@
+# imported from https://github.com/rf0444/hoge/blob/master/bashrc_mac.txt
+
+PS1='\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[33m\]\w$(__git_ps1)\[\e[0m\]\n\$ '
+
+alias gitk='gitk --all &'
+
+# tmux
+alias tmux='tmuxx'
+alias tm='tmuxx'
+alias tma='tmux attach'
+alias tml='tmux list-window'
+
+export EDITOR=vim
+if [ -f /usr/local/etc/bash_completion ]; then
+	. /usr/local/etc/bash_completion
+fi
+

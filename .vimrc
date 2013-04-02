@@ -76,11 +76,11 @@ set background=dark
 set showmatch
 set showmode
 set tabstop=4
+" set tabstop=2
 " set autoindent
+" set expandtab
 set tags=tags
 set shiftwidth=4
-set tabstop=2
-set expandtab
 set ambiwidth=double
 let loaded_matchparen=1
 set backspace=indent,eol,start
