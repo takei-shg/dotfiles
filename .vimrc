@@ -83,12 +83,11 @@ let g:solarized_termcolors=256
 colorscheme solarized
 set showmatch
 set showmode
-set tabstop=4
 " set autoindent
 set tags=tags
 set shiftwidth=4
 set tabstop=2
-set expandtab
+set noexpandtab
 set ambiwidth=double
 let loaded_matchparen=1
 set backspace=indent,eol,start
@@ -250,3 +249,4 @@ autocmd BufWritePost *.erl :silent !(cd %:p:h;ctags *)&
 " as well
 " " Run erlc on the file being saved
 " autocmd BufWritePost *.erl :!erlc <afile>
+
