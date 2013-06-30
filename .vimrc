@@ -42,6 +42,9 @@ Bundle 'kana/vim-fakeclip'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'majutsushi/tagbar'
 
+" for erlang
+Bundle 'jimenezrick/vimerl'
+
 " Japanese-IME
 " im_control.vim is installed into .vim/plugin.
 " vundle cannot install im_control.vim.
@@ -84,7 +87,7 @@ colorscheme solarized
 set showmatch
 set showmode
 " set autoindent
-set tags=tags
+" set tags=tags
 set shiftwidth=4
 set tabstop=2
 set noexpandtab
@@ -235,11 +238,11 @@ let Tlist_Show_One_File=1 " especially with this one
 let Tlist_Compact_Format=1
 let Tlist_Ctags_Cmd='/opt/local/bin/ctags'
 set updatetime=1000
-nmap ,t :!(cd %:p:h;ctags *)& " Maps the updates of tags to key ,t.
+" nmap ,t :!(cd %:p:h;ctags *)& " Maps the updates of tags to key ,t.
 set tags=tags; " The ';' at the end will cause the ctags plugin to search for current dir and above dirs until it find a tag file.
 
 nmap <F8> :TagbarToggle<CR>
-nnoremap <C-[> :pop<CR>
+nnoremap <C-_> :pop<CR>
 
 " Add the following below if you want to generate ctags upon saving a file
 " " Auto-generate ctags upon making changes to a file

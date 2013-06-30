@@ -17,6 +17,12 @@ alias la='gls $LS_OPTIONS -AG'
 alias l='gls $LS_OPTIONS -CFG'
 alias lla='gls $LS_OPTIONS -laG'
 
+function cdls() {
+  \cd $1;
+	ls;
+}
+alias cd=cdls
+
 alias vi=vim
 alias vr='vi -R'
 alias sl='gls $LS_OPTIONS -G'
@@ -43,3 +49,8 @@ export EC2_HOME=/Users/stakei/devel/ec2-api-tools-1.6.3.0
 
 export PATH=$PATH:$EC2_HOME/bin
 eval `opam config -env`
+
+# activate erlang shell
+if [ -e /Users/stakei/erlang/r15b01/activate ]; then
+		. ~/erlang/r15b01/activate
+fi

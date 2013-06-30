@@ -19,3 +19,5 @@ set number
 set history=200
 set laststatus=2
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
+
+set lines=90 columns=150

@@ -36,6 +36,9 @@ export D=~/Dev
 #2012/June/4 for android REPO
 export PATH=~/bin:$PATH
 
+#2013/June/1 for erlang lib
+export ERL_LIBS=/Users/stakei/devel/erlang/proper
+
 #2012/July/3 to validate .bashrc
 if [ -f ~/.bashrc ]; then
 	. ~/.bashrc
