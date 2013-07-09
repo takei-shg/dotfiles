@@ -36,7 +36,7 @@ Bundle 'mattn/zencoding-vim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'altercation/vim-colors-solarized'
 " clipboard
-Bundle 'kana/vim-fakeclip'
+" Bundle 'kana/vim-fakeclip'
 
 " ctags
 Bundle 'vim-scripts/taglist.vim'
@@ -85,6 +85,7 @@ set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
 set showmatch
+set matchtime=3
 set showmode
 " set autoindent
 " set tags=tags
@@ -94,12 +95,31 @@ set noexpandtab
 set ambiwidth=double
 let loaded_matchparen=1
 set backspace=indent,eol,start
-set hlsearch
 set fdm=marker
 set number
 set history=200
 set laststatus=2
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
+
+" http://lambdalisue.hatenablog.com/entry/2013/06/23/071344
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+
+set shiftround
+set infercase
+set hidden
+set switchbuf=useopen
+
+set matchpairs& matchpairs+=<:>
+
+" set nowritebackup
+set nobackup
+set noswapfile
+
+set list
+set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%,eol:↲
 
 nnoremap j gj
 nnoremap k gk

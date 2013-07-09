@@ -4,6 +4,7 @@
 ln -s $HOME/dotfiles/.bashrc $HOME/.bashrc
 ln -s $HOME/dotfiles/.bash_profile $HOME/.bash_profile
 ln -s $HOME/dotfiles/.vimrc $HOME/.vimrc
+ln -s $HOME/dotfiles/.gvimrc $HOME/.gvimrc
 ln -s $HOME/dotfiles/.gitconfig $HOME/.gitconfig
 ln -s $HOME/dotfiles/.dir_colors $HOME/.dir_colors
 ln -s $HOME/dotfiles/.screenrc $HOME/.screenrc
