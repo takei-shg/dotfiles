@@ -216,6 +216,7 @@ inoremap <C-j> <ESC>
 
 nnoremap <C-n> :bn<CR>
 nnoremap <C-p> :bp<CR>
+nnoremap <C-N> :YRToggle<CR>
 "Escの2回押しでハイライト消去
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
@@ -367,6 +368,5 @@ autocmd BufWritePost *.erl :silent !(cd %:p:h;ctags *)&
     " let g:VimpleNoteUsername = ""
     " let g:VimpleNotePassword = ""
 
-nnoremap <C-f>n :tabe<CR>
 nnoremap <C-f>s :VimpleNote -n<CR>
 nnoremap <C-f>l :VimpleNote -l<CR>
