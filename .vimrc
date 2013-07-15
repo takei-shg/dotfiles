@@ -68,6 +68,12 @@ else
     " git
     NeoBundle "https://github.com/tpope/vim-fugitive.git"
 
+    NeoBundle 'tpope/vim-surround'
+    NeoBundle 'vim-scripts/Align'
+    NeoBundle 'vim-scripts/YankRing.vim'
+
+    " NeoBundle 'https://github.com/sjl/gundo.vim.git'
+
     " Check
     NeoBundleCheck
 endif
