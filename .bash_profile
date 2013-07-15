@@ -43,3 +43,10 @@ export ERL_LIBS=/Users/stakei/devel/erlang/proper
 if [ -f ~/.bashrc ]; then
 	. ~/.bashrc
 fi
+
+# 2013/July/13
+# path for apps installed by rubygems
+export PATH="/usr/local/Cellar/ruby/2.0.0-p247/bin:$PATH"
+
+# Erlang
+. $HOME/devel/erlang/activate

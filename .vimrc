@@ -1,54 +1,134 @@
-"vundle
+" NeoBundle http://lambdalisue.hatenablog.com/entry/2013/06/23/071344
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+let s:noplugin = 0
+let s:bundle_root = expand('~/.vim/bundle')
+let s:neobundle_root = s:bundle_root . '/neobundle.vim'
+if !isdirectory(s:neobundle_root) || v:version < 702
+  let s:noplugin = 1
+else
+    if has('vim_starting')
+      execute "set runtimepath+=" . s:neobundle_root
+    endif
+    call neobundle#rc(s:bundle_root)
 
-" for basis
-Bundle 'Shougo/vimproc'
-Bundle 'Shougo/unite.vim'
-" Bundle 'Shougo/neocomplcache'
-" Bundle 'tpope/vim-surround'
+    NeoBundleFetch 'Shougo/neobundle.vim'
 
-" for files
-Bundle 'Shougo/vimshell'
-Bundle 'Shougo/vimfiler'
-Bundle 'scrooloose/nerdtree'
+    NeoBundle "Shougo/vimproc", {
+    \ "build": {
+    \ "windows" : "make -f make_mingw32.mak",
+    \ "cygwin" : "make -f make_cygwin.mak",
+    \ "mac" : "make -f make_mac.mak",
+    \ "unix" : "make -f make_unix.mak",
+    \ }}
 
-" for Syntastic
-"Bundle 'scrooloose/syntastic'
+    NeoBundle 'Shougo/unite.vim'
+    " NeoBundle 'Shougo/neocomplcache'
+    " NeoBundle 'tpope/vim-surround'
+    
+    " for files
+    NeoBundle 'Shougo/vimshell'
+    NeoBundle 'Shougo/vimfiler'
+    " NeoBundle 'scrooloose/nerdtree'
+    
+    " for Syntastic
+    "NeoBundle 'scrooloose/syntastic'
+    
+    " for Haskell
+    " NeoBundle 'eagletmt/ghci-vim'
+    " NeoBundle 'eagletmt/ghcmod-vim'
+    " NeoBundle 'eagletmt/unite-haddock'
+    " NeoBundle 'ujihisa/neco-ghc'
+    " NeoBundle 'ujihisa/unite-haskellimport'
+    
+    " for Coq
+    NeoBundle 'eagletmt/coqtop-vim'
+    
+    " for xml
+    NeoBundle 'mattn/zencoding-vim'
+    
+    " for tmux status line
+    NeoBundle 'Lokaltog/vim-powerline'
+    NeoBundle 'altercation/vim-colors-solarized'
+    " clipboard
+    " NeoBundle 'kana/vim-fakeclip'
+    
+    " ctags
+    NeoBundle 'vim-scripts/taglist.vim'
+    NeoBundle 'majutsushi/tagbar'
+    
+    " for erlang
+    NeoBundle 'jimenezrick/vimerl'
+ 
+    " for simplenote
+    NeoBundle "https://github.com/mattn/vimplenote-vim.git"
+    NeoBundle "https://github.com/mattn/webapi-vim.git"
 
-" for Haskell
-" Bundle 'eagletmt/ghci-vim'
-" Bundle 'eagletmt/ghcmod-vim'
-" Bundle 'eagletmt/unite-haddock'
-" Bundle 'ujihisa/neco-ghc'
-" Bundle 'ujihisa/unite-haskellimport'
+    " git
+    NeoBundle "https://github.com/tpope/vim-fugitive.git"
 
-" for Coq
-Bundle 'eagletmt/coqtop-vim'
+    " Check
+    NeoBundleCheck
+endif
 
-" for xml
-Bundle 'mattn/zencoding-vim'
+" use .vimrc.local if it exists
+let s:local_vimrc = expand('~/.vimrc.local')
+if filereadable(s:local_vimrc)
+    execute 'source ' . s:local_vimrc
+endif
 
-" for tmux status line
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'altercation/vim-colors-solarized'
-" clipboard
-" Bundle 'kana/vim-fakeclip'
-
-" ctags
-Bundle 'vim-scripts/taglist.vim'
-Bundle 'majutsushi/tagbar'
-
-" for erlang
-Bundle 'jimenezrick/vimerl'
-
-" Japanese-IME
-" im_control.vim is installed into .vim/plugin.
-" vundle cannot install im_control.vim.
-" Bundle 'fuenor/im_control.vim' 
+"vundle
+" set nocompatible
+" filetype off
+" 
+" set rtp+=~/.vim/bundle/vundle/
+" call vundle#rc()
+" 
+" " for basis
+" Bundle 'Shougo/vimproc'
+" Bundle 'Shougo/unite.vim'
+" " Bundle 'Shougo/neocomplcache'
+" " Bundle 'tpope/vim-surround'
+" 
+" " for files
+" Bundle 'Shougo/vimshell'
+" Bundle 'Shougo/vimfiler'
+" Bundle 'scrooloose/nerdtree'
+" 
+" " for Syntastic
+" "Bundle 'scrooloose/syntastic'
+" 
+" " for Haskell
+" " Bundle 'eagletmt/ghci-vim'
+" " Bundle 'eagletmt/ghcmod-vim'
+" " Bundle 'eagletmt/unite-haddock'
+" " Bundle 'ujihisa/neco-ghc'
+" " Bundle 'ujihisa/unite-haskellimport'
+" 
+" " for Coq
+" Bundle 'eagletmt/coqtop-vim'
+" 
+" " for xml
+" Bundle 'mattn/zencoding-vim'
+" 
+" " for tmux status line
+" Bundle 'Lokaltog/vim-powerline'
+" Bundle 'altercation/vim-colors-solarized'
+" " clipboard
+" " Bundle 'kana/vim-fakeclip'
+" 
+" " ctags
+" Bundle 'vim-scripts/taglist.vim'
+" Bundle 'majutsushi/tagbar'
+" 
+" " for erlang
+" Bundle 'jimenezrick/vimerl'
+" 
+" " Japanese-IME
+" " im_control.vim is installed into .vim/plugin.
+" " vundle cannot install im_control.vim.
+" " Bundle 'fuenor/im_control.vim' 
 
 filetype plugin indent on
 
@@ -273,3 +353,14 @@ autocmd BufWritePost *.erl :silent !(cd %:p:h;ctags *)&
 " " Run erlc on the file being saved
 " autocmd BufWritePost *.erl :!erlc <afile>
 
+"----------------------------------------------------
+"" vimplenote プラグイン
+" mattn/vimplenote.vim
+" "----------------------------------------------------
+" username & password is in .vimrc.local
+    " let g:VimpleNoteUsername = ""
+    " let g:VimpleNotePassword = ""
+
+nnoremap <C-f>n :tabe<CR>
+nnoremap <C-f>s :VimpleNote -n<CR>
+nnoremap <C-f>l :VimpleNote -l<CR>
