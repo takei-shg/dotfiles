@@ -5,11 +5,13 @@ filetype off
 let s:noplugin = 0
 let s:bundle_root = expand('~/.vim/bundle')
 let s:neobundle_root = s:bundle_root . '/neobundle.vim'
+let s:plugindev_root = expand('~/.vim/plugindev')
 if !isdirectory(s:neobundle_root) || v:version < 702
   let s:noplugin = 1
 else
     if has('vim_starting')
       execute "set runtimepath+=" . s:neobundle_root
+      " execute "set runtimepath+=" . s:plugindev_root
     endif
     call neobundle#rc(s:bundle_root)
 
@@ -25,7 +27,6 @@ else
 
     NeoBundle 'Shougo/unite.vim'
     " NeoBundle 'Shougo/neocomplcache'
-    " NeoBundle 'tpope/vim-surround'
     
     " for files
     NeoBundle 'Shougo/vimshell'
@@ -55,22 +56,26 @@ else
     " NeoBundle 'kana/vim-fakeclip'
     
     " ctags
-    NeoBundle 'vim-scripts/taglist.vim'
+    " NeoBundle 'vim-scripts/taglist.vim'
     NeoBundle 'majutsushi/tagbar'
     
     " for erlang
     NeoBundle 'jimenezrick/vimerl'
  
     " for simplenote
-    NeoBundle "https://github.com/mattn/vimplenote-vim.git"
-    NeoBundle "https://github.com/mattn/webapi-vim.git"
+    " NeoBundle "mrtazz/simplenote.vim"
+    " NeoBundle 'https://github.com/kakkyz81/evervim.git'
+    " NeoBundle "mattn/webapi-vim"
+    " NeoBundle "takei-shg/unite-source-simplenote", "takei-shg"
+    " NeoBundle "kana/vim-metarw"
+    " NeoBundle "takei-shg/vim-metarw-simplenote", "takei-shg"
 
     " git
     NeoBundle "https://github.com/tpope/vim-fugitive.git"
 
     NeoBundle 'tpope/vim-surround'
     NeoBundle 'vim-scripts/Align'
-    NeoBundle 'vim-scripts/YankRing.vim'
+    " NeoBundle 'vim-scripts/YankRing.vim'
 
     " NeoBundle 'https://github.com/sjl/gundo.vim.git'
 
@@ -175,7 +180,7 @@ set matchtime=3
 set showmode
 " set autoindent
 " set tags=tags
-set shiftwidth=4
+set shiftwidth=1
 set tabstop=2
 set noexpandtab
 set ambiwidth=double
@@ -216,7 +221,6 @@ inoremap <C-j> <ESC>
 
 nnoremap <C-n> :bn<CR>
 nnoremap <C-p> :bp<CR>
-nnoremap <C-N> :YRToggle<CR>
 "Escの2回押しでハイライト消去
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
@@ -275,6 +279,8 @@ nnoremap <silent> [unite]m :<C-u>Unite file_mru<CR>
 nnoremap <silent> [unite]c :<C-u>Unite bookmark<CR>
 "ブックマークに追加
 nnoremap <silent> [unite]a :<C-u>UniteBookmarkAdd<CR>
+"Simplenote一覧
+nnoremap <silent> [unite]s :<C-u>Unite simplenote<CR>
 "uniteを開いている間のキーマッピング
 augroup vimrc
 	autocmd FileType unite call s:unite_my_settings()
@@ -360,6 +366,7 @@ autocmd BufWritePost *.erl :silent !(cd %:p:h;ctags *)&
 " " Run erlc on the file being saved
 " autocmd BufWritePost *.erl :!erlc <afile>
 
+
 "----------------------------------------------------
 "" vimplenote プラグイン
 " mattn/vimplenote.vim
@@ -368,5 +375,11 @@ autocmd BufWritePost *.erl :silent !(cd %:p:h;ctags *)&
     " let g:VimpleNoteUsername = ""
     " let g:VimpleNotePassword = ""
 
+    let g:metarw_simplenote_email = "takei.shg@gmail.com"
+    let g:VimplenoteVertical=1
 nnoremap <C-f>s :VimpleNote -n<CR>
 nnoremap <C-f>l :VimpleNote -l<CR>
+
+" evervim 設定
+let g:evervim_devtoken='S=s29:U=31621d:E=148257b55b0:C=140cdca29b4:P=1cd:A=en-devtoken:V=2:H=ba897f0ce721c79e7bd98a38d0887235'
+
