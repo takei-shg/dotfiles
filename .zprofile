@@ -49,3 +49,4 @@ export PATH="/Applications/CoqIdE_8.3pl5.app/Contents/Resources/bin:$PATH"
 
 # 2013/Sep/3 for conscript
 export PATH="$HOME/bin:$PATH"
+# export TERM="xterm-256color"
