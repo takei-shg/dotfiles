@@ -3,6 +3,7 @@ syntax on
 set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
+set guifont=Inconsolata:h16
 set showmatch
 set showmode
 " set autoindent
