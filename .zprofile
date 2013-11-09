@@ -54,3 +54,4 @@ alias bower='noglob bower'
 alias less="${PAGER}"
 export PAGER='less -X -i'
 alias -g L='| less' # ついでにこれもあると便利
+alias grep="grep -v grep | grep"
