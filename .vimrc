@@ -90,57 +90,6 @@ if filereadable(s:local_vimrc)
     execute 'source ' . s:local_vimrc
 endif
 
-"vundle
-" set nocompatible
-" filetype off
-" 
-" set rtp+=~/.vim/bundle/vundle/
-" call vundle#rc()
-" 
-" " for basis
-" Bundle 'Shougo/vimproc'
-" Bundle 'Shougo/unite.vim'
-" " Bundle 'Shougo/neocomplcache'
-" " Bundle 'tpope/vim-surround'
-" 
-" " for files
-" Bundle 'Shougo/vimshell'
-" Bundle 'Shougo/vimfiler'
-" Bundle 'scrooloose/nerdtree'
-" 
-" " for Syntastic
-" "Bundle 'scrooloose/syntastic'
-" 
-" " for Haskell
-" " Bundle 'eagletmt/ghci-vim'
-" " Bundle 'eagletmt/ghcmod-vim'
-" " Bundle 'eagletmt/unite-haddock'
-" " Bundle 'ujihisa/neco-ghc'
-" " Bundle 'ujihisa/unite-haskellimport'
-" 
-" " for Coq
-" Bundle 'eagletmt/coqtop-vim'
-" 
-" " for xml
-" Bundle 'mattn/zencoding-vim'
-" 
-" " for tmux status line
-" Bundle 'Lokaltog/vim-powerline'
-" Bundle 'altercation/vim-colors-solarized'
-" " clipboard
-" " Bundle 'kana/vim-fakeclip'
-" 
-" " ctags
-" Bundle 'vim-scripts/taglist.vim'
-" Bundle 'majutsushi/tagbar'
-" 
-" " for erlang
-" Bundle 'jimenezrick/vimerl'
-" 
-" " Japanese-IME
-" " im_control.vim is installed into .vim/plugin.
-" " vundle cannot install im_control.vim.
-" " Bundle 'fuenor/im_control.vim' 
 
 filetype plugin indent on
 
@@ -224,7 +173,7 @@ inoremap <C-j> <ESC>
 " nnoremap <C-p> :bp<CR>
 nnoremap <C-n> gt
 nnoremap <C-p> gT
-nnoremap <C-w> :bd<CR>
+nnoremap <C-x> :bd<CR>
 
 "Escの2回押しでハイライト消去
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
@@ -238,6 +187,13 @@ vmap ,c :s;//;;<CR>:nohlsearch<CR>
 
 set fileencodings=utf-8,sjis,cp932,euc-jp
 
+" cmdline editing
+:cnoremap <C-A> <Home>
+:cnoremap <C-F> <Right>
+:cnoremap <C-B> <Left>
+:cnoremap <Esc>b <S-Left>
+:cnoremap <Esc>f <S-Right>
+
 " 2012/Dec/24 yuroyoro
 let g:Powerline_symbols = 'fancy'
 
@@ -248,6 +204,22 @@ nmap <Space>f [unite]
 
 "インサートモードで開始しない
 let g:unite_enable_start_insert = 0
+
+" grep検索
+nnoremap <silent> ,g  :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
+
+" カーソル位置の単語をgrep検索
+nnoremap <silent> ,cg :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W>
+
+" grep検索結果の再呼出
+nnoremap <silent> ,r  :<C-u>UniteResume search-buffer<CR>
+
+" unite grep に ag(The Silver Searcher) を使う
+if executable('ag')
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
+  let g:unite_source_grep_recursive_opt = ''
+endif
 
 " For ack.
 if executable('ack-grep')
