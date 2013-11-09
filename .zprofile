@@ -51,3 +51,6 @@ alias d='cd ~/devel'
 alias dw='cd ~/devel/work'
 alias dh='cd ~/devel/haskell'
 alias bower='noglob bower'
+alias less="${PAGER}"
+export PAGER='less -X -i'
+alias -g L='| less' # ついでにこれもあると便利
