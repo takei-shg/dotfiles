@@ -132,7 +132,7 @@ set showmode
 " set tags=tags
 set shiftwidth=1
 set tabstop=2
-set noexpandtab
+set expandtab
 set ambiwidth=double
 let loaded_matchparen=1
 set backspace=indent,eol,start

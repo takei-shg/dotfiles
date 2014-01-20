@@ -47,11 +47,18 @@ export PATH="/Applications/CoqIdE_8.3pl5.app/Contents/Resources/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 # export TERM="xterm-256color"
 alias gitk="gitk --all &"
+alias vag="vagrant"
 alias d='cd ~/devel'
+alias dev='cd ~/devel'
 alias dw='cd ~/devel/work'
 alias dh='cd ~/devel/haskell'
 alias bower='noglob bower'
 alias less="${PAGER}"
 export PAGER='less -X -i'
 alias -g L='| less' # ついでにこれもあると便利
-alias grep="grep -v grep | grep"
+alias grep="grep -v grep | grep --color "
+alias pswork="cat ~/pswork"
+
+
+# for ruby 1.8.7
+eval "$(rbenv init -)"
