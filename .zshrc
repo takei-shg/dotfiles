@@ -47,8 +47,3 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
-# OPAM configuration
-. /Users/stakei/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
-
-eval `opam config env`
-

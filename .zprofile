@@ -21,8 +21,6 @@ export PATH="/usr/local/Cellar/ruby/1.9.3-p194/bin:$PATH"
 # export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
 
-# 2011/Dec/30 homebrew install
-export PATH=/usr/local/bin:$PATH
 
 #2013/June/1 for erlang lib
 export ERL_LIBS=/Users/stakei/devel/erlang/proper
@@ -43,6 +41,10 @@ export PATH="$HOME/cabal-dev/bin:$PATH"
 # 2013/Aug/17
 export PATH="/Applications/CoqIdE_8.3pl5.app/Contents/Resources/bin:$PATH"
 
+# 2014/Feb/17
+export PATH="$HOME/devel/work/adt-bundle-mac-x86_64-20131030/sdk/tools:$PATH"
+export PATH="$HOME/devel/work/adt-bundle-mac-x86_64-20131030/sdk/platform-tools:$PATH"
+
 # 2013/Sep/3 for conscript
 export PATH="$HOME/bin:$PATH"
 # export TERM="xterm-256color"
@@ -51,6 +53,7 @@ alias vag="vagrant"
 alias d='cd ~/devel'
 alias dev='cd ~/devel'
 alias dw='cd ~/devel/work'
+export dw="$HOME/devel/work"
 alias dh='cd ~/devel/haskell'
 alias bower='noglob bower'
 alias less="${PAGER}"
@@ -58,7 +61,14 @@ export PAGER='less -X -i'
 alias -g L='| less' # ついでにこれもあると便利
 alias grep="grep -v grep | grep --color "
 alias pswork="cat ~/pswork"
+alias tm="tmuxx"
+alias hosts="sudo vim /etc/hosts"
+alias simpleserver="python -m SimpleHTTPServer"
+alias mvim="/usr/local/Cellar/macvim-kaoriya/HEAD/MacVim.app/Contents/MacOS/mvim"
 
 
-# for ruby 1.8.7
+# 2011/Dec/30 homebrew install
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/Cellar:$PATH"
+export PATH="/usr/local/lib/node_modules:$PATH"
 eval "$(rbenv init -)"

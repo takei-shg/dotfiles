@@ -137,7 +137,7 @@ set ambiwidth=double
 let loaded_matchparen=1
 set backspace=indent,eol,start
 set fdm=marker
-set number
+" set number
 set history=200
 set laststatus=2
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
@@ -160,7 +160,7 @@ set nobackup
 set noswapfile
 
 set list
-set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%,eol:↲
+set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%
 
 nnoremap j gj
 nnoremap k gk
