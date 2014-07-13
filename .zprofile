@@ -45,6 +45,9 @@ export PATH="/Applications/CoqIdE_8.3pl5.app/Contents/Resources/bin:$PATH"
 export PATH="$HOME/devel/work/adt-bundle-mac-x86_64-20131030/sdk/tools:$PATH"
 export PATH="$HOME/devel/work/adt-bundle-mac-x86_64-20131030/sdk/platform-tools:$PATH"
 
+# for docker
+export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
+
 # 2013/Sep/3 for conscript
 export PATH="$HOME/bin:$PATH"
 # export TERM="xterm-256color"
@@ -65,7 +68,22 @@ alias tm="tmuxx"
 alias hosts="sudo vim /etc/hosts"
 alias simpleserver="python -m SimpleHTTPServer"
 alias mvim="/usr/local/Cellar/macvim-kaoriya/HEAD/MacVim.app/Contents/MacOS/mvim"
+alias less='less -X'
 
+function setjdk() {
+  if [ $# -ne 0 ]; then
+   removeFromPath '/System/Library/Frameworks/JavaVM.framework/Home/bin'
+   if [ -n "${JAVA_HOME+x}" ]; then
+    removeFromPath $JAVA_HOME
+   fi
+   export JAVA_HOME=`/usr/libexec/java_home -v $@`
+   export PATH=$JAVA_HOME/bin:$PATH
+  fi
+ }
+ function removeFromPath() {
+  export PATH=$(echo $PATH | sed -E -e "s;:$1;;" -e "s;$1:?;;")
+ }
+setjdk 1.7
 
 # 2011/Dec/30 homebrew install
 export PATH="/usr/local/bin:$PATH"
