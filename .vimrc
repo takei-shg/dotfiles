@@ -80,6 +80,8 @@ else
     " NeoBundle 'https://github.com/sjl/gundo.vim.git'
 
     NeoBundle 'derekwyatt/vim-scala'
+    NeoBundle 'leafgarland/typescript-vim'
+
     " Check
     NeoBundleCheck
 endif

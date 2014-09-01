@@ -57,6 +57,8 @@ alias d='cd ~/devel'
 alias dev='cd ~/devel'
 alias dw='cd ~/devel/work'
 export dw="$HOME/devel/work"
+alias sn='cd ~/devel/smartnews'
+export sn="$HOME/devel/smartnews"
 alias dh='cd ~/devel/haskell'
 alias bower='noglob bower'
 alias less="${PAGER}"
@@ -69,6 +71,7 @@ alias hosts="sudo vim /etc/hosts"
 alias simpleserver="python -m SimpleHTTPServer"
 alias mvim="/usr/local/Cellar/macvim-kaoriya/HEAD/MacVim.app/Contents/MacOS/mvim"
 alias less='less -X'
+alias xml="xmllint --format -"
 
 function setjdk() {
   if [ $# -ne 0 ]; then
@@ -83,7 +86,8 @@ function setjdk() {
  function removeFromPath() {
   export PATH=$(echo $PATH | sed -E -e "s;:$1;;" -e "s;$1:?;;")
  }
-setjdk 1.7
+setjdk 1.8
+
 
 # 2011/Dec/30 homebrew install
 export PATH="/usr/local/bin:$PATH"
