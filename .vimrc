@@ -47,7 +47,7 @@ else
     NeoBundle 'eagletmt/coqtop-vim'
     
     " for xml
-    NeoBundle 'mattn/zencoding-vim'
+    NeoBundle 'mattn/emmet-vim'
     
     " for tmux status line
     NeoBundle 'Lokaltog/vim-powerline'
