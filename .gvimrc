@@ -3,14 +3,14 @@ syntax on
 set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
-set guifont=Inconsolata:h16
+set guifont=Ricty-Regular:h16
 set showmatch
 set showmode
 " set autoindent
 set tags=tags
 set shiftwidth=4
-set tabstop=2
-set noexpandtab
+set tabstop=4
+set expandtab
 set ambiwidth=double
 let loaded_matchparen=1
 set backspace=indent,eol,start
