@@ -143,6 +143,7 @@ set fdm=marker
 set history=200
 set laststatus=2
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
+set ff=unix
 
 " http://lambdalisue.hatenablog.com/entry/2013/06/23/071344
 set ignorecase
@@ -171,10 +172,10 @@ vnoremap k gk
 
 inoremap <C-j> <ESC>
 
-" nnoremap <C-n> :bn<CR>
-" nnoremap <C-p> :bp<CR>
-nnoremap <C-n> gt
-nnoremap <C-p> gT
+nnoremap <C-n> :bn<CR>
+nnoremap <C-p> :bp<CR>
+" nnoremap <C-n> gt
+" nnoremap <C-p> gT
 nnoremap <C-x> :bd<CR>
 
 "Escの2回押しでハイライト消去
@@ -297,7 +298,8 @@ let g:vimfiler_as_default_explorer = 1
 "セーフモードを無効にした状態で起動する
 let g:vimfiler_safe_mode_by_default = 0
 " Edit file by tabedit.
-let g:vimfiler_edit_action = 'tabopen'
+" let g:vimfiler_edit_action = 'tabopen'
+let g:vimfiler_edit_action = 'open'
 "現在開いているバッファのディレクトリを開く
 nnoremap <silent> <Leader>fe :<C-u>VimFilerBufferDir -quit<CR>
 "現在開いているバッファをIDE風に開く

@@ -21,7 +21,7 @@ set history=200
 set laststatus=2
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 
-set lines=90 columns=150
+set lines=90 columns=100
 
 inoremap <silent> <ESC> <ESC>:set iminsert=0<CR>
 

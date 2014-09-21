@@ -55,8 +55,8 @@ alias gitk="gitk --all &"
 alias vag="vagrant"
 alias d='cd ~/devel'
 alias dev='cd ~/devel'
-alias dw='cd ~/devel/work'
-export dw="$HOME/devel/work"
+alias dn='cd ~/devel/dennoo'
+export dn="$HOME/devel/dennoo"
 alias sn='cd ~/devel/smartnews'
 export sn="$HOME/devel/smartnews"
 alias dh='cd ~/devel/haskell'
@@ -88,9 +88,16 @@ function setjdk() {
  }
 setjdk 1.8
 
+# 2014/Sep/21 for Gradle
+export GRADLE_HOME="$HOME/bin/gradle-2.1"
+export PATH="$GRADLE_HOME/bin:$PATH"
+
 
 # 2011/Dec/30 homebrew install
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/Cellar:$PATH"
 export PATH="/usr/local/lib/node_modules:$PATH"
 eval "$(rbenv init -)"
+
+#2014/Sep/7
+export PATH="$HOME/.gem/ruby/2.0.0/bin:$PATH"
