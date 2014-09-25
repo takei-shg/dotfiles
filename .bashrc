@@ -57,3 +57,6 @@ export PATH=$PATH:$EC2_HOME/bin
 if [ -e /Users/stakei/erlang/r15b01/activate ]; then
 		. ~/erlang/r15b01/activate
 fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "/Users/nanika/.gvm/bin/gvm-init.sh" ]] && source "/Users/nanika/.gvm/bin/gvm-init.sh"

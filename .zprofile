@@ -3,34 +3,15 @@
 # export PATH=$PATH:$JAVA_HOME/bin
 export CATALINA_HOME=/usr/local/Cellar/tomcat/7.0.34/libexec
 export JAVA_OPTS='-Dfile.encoding=UTF-8'
-# export SCALA_HOME=~/Developers/scala-2.8.1.final
-# export PATH=$PATH:~/Developers/play-1.1.1:$SCALA_HOME/bin
-# export PATH=$PATH:~/Developers/play-2.0.2:$SCALA_HOME/bin
-# export PATH=$PATH:~/bin/play-2.0.4:$SCALA_HOME/bin
 # 2011/July/21 for Haskell
 export PATH="$HOME/Library/Haskell/bin:$PATH"
 
-# 2012/Aug/5
-export PATH="/usr/local/Cellar/ruby/1.9.3-p194/bin:$PATH"
-
-##
-# Your previous /Users/stakei/.bash_profile file was backed up as /Users/stakei/.bash_profile.macports-saved_2011-05-26_at_22:14:13
-##
-
-# MacPorts Installer addition on 2011-05-26_at_22:14:13: adding an # appropriate PATH variable for use with MacPorts.
-# export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
-
 
 #2013/June/1 for erlang lib
-export ERL_LIBS=/Users/stakei/devel/erlang/proper
-
-# 2013/July/13
-# path for apps installed by rubygems
-export PATH="/usr/local/Cellar/ruby/2.0.0-p247/bin:$PATH"
+export ERL_LIBS=/Users/stakei/dev/erlang/proper
 
 # Erlang
-. $HOME/devel/erlang/activate
+# . $HOME/dev/erlang/activate
 
 # for tmuxx
 export PATH="$HOME/dotfiles:$PATH"
@@ -42,8 +23,8 @@ export PATH="$HOME/cabal-dev/bin:$PATH"
 export PATH="/Applications/CoqIdE_8.3pl5.app/Contents/Resources/bin:$PATH"
 
 # 2014/Feb/17
-export PATH="$HOME/devel/work/adt-bundle-mac-x86_64-20131030/sdk/tools:$PATH"
-export PATH="$HOME/devel/work/adt-bundle-mac-x86_64-20131030/sdk/platform-tools:$PATH"
+export PATH="$HOME/dev/work/adt-bundle-mac-x86_64-20131030/sdk/tools:$PATH"
+export PATH="$HOME/dev/work/adt-bundle-mac-x86_64-20131030/sdk/platform-tools:$PATH"
 
 # for docker
 export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
@@ -53,13 +34,12 @@ export PATH="$HOME/bin:$PATH"
 # export TERM="xterm-256color"
 alias gitk="gitk --all &"
 alias vag="vagrant"
-alias d='cd ~/devel'
-alias dev='cd ~/devel'
-alias dn='cd ~/devel/dennoo'
-export dn="$HOME/devel/dennoo"
-alias sn='cd ~/devel/smartnews'
-export sn="$HOME/devel/smartnews"
-alias dh='cd ~/devel/haskell'
+alias dev='cd ~/dev'
+alias dn='cd ~/dev/dennoo'
+export dn="$HOME/dev/dennoo"
+alias sn='cd ~/dev/smartnews'
+export sn="$HOME/dev/smartnews"
+alias dh='cd ~/dev/haskell'
 alias bower='noglob bower'
 alias less="${PAGER}"
 export PAGER='less -X -i'
@@ -88,10 +68,6 @@ function setjdk() {
  }
 setjdk 1.8
 
-# 2014/Sep/21 for Gradle
-export GRADLE_HOME="$HOME/bin/gradle-2.1"
-export PATH="$GRADLE_HOME/bin:$PATH"
-
 
 # 2011/Dec/30 homebrew install
 export PATH="/usr/local/bin:$PATH"
@@ -99,5 +75,3 @@ export PATH="/usr/local/Cellar:$PATH"
 export PATH="/usr/local/lib/node_modules:$PATH"
 eval "$(rbenv init -)"
 
-#2014/Sep/7
-export PATH="$HOME/.gem/ruby/2.0.0/bin:$PATH"

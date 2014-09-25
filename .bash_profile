@@ -50,3 +50,6 @@ export PATH="/usr/local/Cellar/ruby/2.0.0-p247/bin:$PATH"
 
 # Erlang
 . $HOME/devel/erlang/activate
+
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "/Users/nanika/.gvm/bin/gvm-init.sh" ]] && source "/Users/nanika/.gvm/bin/gvm-init.sh"

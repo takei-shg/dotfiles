@@ -81,6 +81,8 @@ else
 
     NeoBundle 'derekwyatt/vim-scala'
     NeoBundle 'leafgarland/typescript-vim'
+    NeoBundle 'clausreinke/typescript-tools'
+    NeoBundle 'tfnico/vim-gradle'
 
     " Check
     NeoBundleCheck
@@ -298,8 +300,8 @@ let g:vimfiler_as_default_explorer = 1
 "セーフモードを無効にした状態で起動する
 let g:vimfiler_safe_mode_by_default = 0
 " Edit file by tabedit.
-" let g:vimfiler_edit_action = 'tabopen'
-let g:vimfiler_edit_action = 'open'
+let g:vimfiler_edit_action = 'tabopen'
+" let g:vimfiler_edit_action = 'open'
 "現在開いているバッファのディレクトリを開く
 nnoremap <silent> <Leader>fe :<C-u>VimFilerBufferDir -quit<CR>
 "現在開いているバッファをIDE風に開く

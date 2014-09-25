@@ -47,3 +47,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
+
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "/Users/nanika/.gvm/bin/gvm-init.sh" ]] && source "/Users/nanika/.gvm/bin/gvm-init.sh"
