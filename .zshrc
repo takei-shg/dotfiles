@@ -26,7 +26,7 @@ if ! zplug check --verbose; then
 fi
 
 # Then, source plugins and add commands to $PATH
-zplug load --verbose
+zplug load
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "/Users/nanika/.gvm/bin/gvm-init.sh" ]] && source "/Users/nanika/.gvm/bin/gvm-init.sh"
