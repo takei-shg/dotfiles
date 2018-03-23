@@ -26,9 +26,6 @@ export PATH="/Applications/CoqIdE_8.3pl5.app/Contents/Resources/bin:$PATH"
 export PATH="$HOME/dev/work/adt-bundle-mac-x86_64-20131030/sdk/tools:$PATH"
 export PATH="$HOME/dev/work/adt-bundle-mac-x86_64-20131030/sdk/platform-tools:$PATH"
 
-# for docker
-export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
-
 # 2013/Sep/3 for conscript
 export PATH="$HOME/bin:$PATH"
 # export TERM="xterm-256color"
@@ -52,6 +49,17 @@ alias simpleserver="python -m SimpleHTTPServer"
 alias mvim="/usr/local/Cellar/macvim-kaoriya/HEAD/MacVim.app/Contents/MacOS/mvim"
 alias less='less -X'
 alias xml="xmllint --format -"
+
+alias gf="git fetch"
+alias gc="git commit"
+alias gr="git rebase"
+alias gs="git st"
+alias gd="git diff"
+alias gdc="git dic"
+alias grbi="git rebase -i HEAD~~~~~"
+alias ga="git add"
+alias gn="git now --all --stat"
+alias tig="/usr/local/bin/tig --all"
 
 function setjdk() {
   if [ $# -ne 0 ]; then
