@@ -10,10 +10,10 @@ zplug "yous/lime"
 
 # Syntax highlighting bundle. zsh-syntax-highlighting must be loaded after
 # excuting compinit command and sourcing other plugins.
-zplug "zsh-users/zsh-syntax-highlighting", nice:9
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
 # history関係
-zplug "zsh-users/zsh-history-substring-search", nice:10
+zplug "zsh-users/zsh-history-substring-search", defer:3
 
 # Tracks your most used directories, based on 'frequency'.
 zplug "rupa/z", use:"*.sh"
