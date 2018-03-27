@@ -36,3 +36,18 @@ fi
 
 # Then, source plugins and add commands to $PATH
 zplug load
+
+# Lime theme settings
+export LIME_DIR_DISPLAY_COMPONENTS=2
+
+# Better history searching with arrow keys
+if zplug check "zsh-users/zsh-history-substring-search"; then
+    bindkey "$terminfo[kcuu1]" history-substring-search-up
+    bindkey "$terminfo[kcud1]" history-substring-search-down
+fi
+
+# Add color to ls command
+export CLICOLOR=1
+
+# NeoVim config
+export XDG_CONFIG_HOME=$HOME/.xdgconfig
