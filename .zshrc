@@ -2,15 +2,24 @@
 source ~/.zplug/init.zsh
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
-# theme (https://github.com/sindresorhus/pure#zplug)
-zplug mafredri/zsh-async, from:github
-zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
+# Vanilla shell
+zplug "yous/vanilli.sh"
 
-# 構文のハイライト(https://github.com/zsh-users/zsh-syntax-highlighting)
-zplug "zsh-users/zsh-syntax-highlighting"
+# theme
+zplug "yous/lime"
+
+# Syntax highlighting bundle. zsh-syntax-highlighting must be loaded after
+# excuting compinit command and sourcing other plugins.
+zplug "zsh-users/zsh-syntax-highlighting", nice:9
 
 # history関係
-zplug "zsh-users/zsh-history-substring-search"
+zplug "zsh-users/zsh-history-substring-search", nice:10
+
+# Tracks your most used directories, based on 'frequency'.
+zplug "rupa/z", use:"*.sh"
+
+# A next-generation cd command with an interactive filter
+zplug "b4b4r07/enhancd", use:init.sh
 
 # タイプ補完
 zplug "zsh-users/zsh-autosuggestions"
@@ -27,6 +36,3 @@ fi
 
 # Then, source plugins and add commands to $PATH
 zplug load
-
-#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "/Users/nanika/.gvm/bin/gvm-init.sh" ]] && source "/Users/nanika/.gvm/bin/gvm-init.sh"
