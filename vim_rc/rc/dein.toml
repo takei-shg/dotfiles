@@ -1,11 +1,8 @@
 [[plugins]]
-repo = 'Shougo/unite.vim'
-
-[[plugins]]
 repo = 'Shougo/vimshell'
 
 [[plugins]]
-repo = 'Shougo/vimfiler'
+repo = 'scrooloose/nerdtree'
 
 [[plugins]]
 repo = 'Lokaltog/vim-powerline'
