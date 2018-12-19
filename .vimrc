@@ -149,6 +149,11 @@ let g:Powerline_symbols = 'fancy'
 
 set clipboard=unnamed,autoselect
 
+" NERDTREE
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
+" https://www.reddit.com/r/vim/comments/a4yzyt/g_characters_prefixing_directory_and_file_names/
+let g:NERDTreeNodeDelimiter = "\u00a0"
+
 " im_control.vim
 " 「日本語入力固定モード」のvi協調モードを無効化
 " let IM_vi_CooperativeMode = 0
