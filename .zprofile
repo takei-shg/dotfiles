@@ -17,6 +17,8 @@ alias dn='cd ~/dev/dennoo'
 export dn="$HOME/dev/dennoo"
 alias sn='cd ~/dev/smartnews'
 export sn="$HOME/dev/smartnews"
+alias ad='cd ~/dev/smartnews/ad'
+export ad="$HOME/dev/smartnews/ad"
 alias dh='cd ~/dev/haskell'
 alias bower='noglob bower'
 alias less="${PAGER}"
@@ -44,8 +46,12 @@ alias tig="/usr/local/bin/tig --all"
 
 export JAVA_HOME=`/usr/libexec/java_home -d 64 -v "1.8*"`
 
+export bastion="bastion"
+alias bas="ssh $bastion"
+
 # 2011/Dec/30 homebrew install
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/Cellar:$PATH"
 export PATH="/usr/local/lib/node_modules:$PATH"
 
+eval "$(rbenv init -)"
