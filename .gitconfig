@@ -16,6 +16,8 @@
 	di = diff
 	dic = diff --cached
 	co = checkout
+	sw = switch
+	sc = switch -c
 	br = branch
 	cl = clone
 	clx = clean -dxf

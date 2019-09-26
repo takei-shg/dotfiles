@@ -19,7 +19,7 @@ zplug "zsh-users/zsh-history-substring-search", defer:3
 zplug "rupa/z", use:"*.sh"
 
 # A next-generation cd command with an interactive filter
-zplug "b4b4r07/enhancd", use:init.sh
+# zplug "b4b4r07/enhancd", use:init.sh
 
 # タイプ補完
 zplug "zsh-users/zsh-autosuggestions"
