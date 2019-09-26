@@ -1,0 +1,14 @@
+# If applied, this commit will...
+# [feat:/fix:/refactor:/perf:/test:/chore:] [issue #id] [summary]
+
+
+# Why is it necessary? (Bug fix, feature, improvements?)
+-
+# How does the change address the issue? 
+-
+# What side effects does this change have?
+-
+
+# https://victoria.dev/verbose/git-commit-practices-your-future-self-will-thank-you-for/
+# To Activate this template
+# git config --global commit.template ~/.gitmessage
