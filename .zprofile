@@ -1,8 +1,6 @@
 # export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
 # export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
 # export PATH=$PATH:$JAVA_HOME/bin
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
-export CATALINA_HOME=/usr/local/Cellar/tomcat/7.0.34/libexec
 export JAVA_OPTS='-Dfile.encoding=UTF-8'
 
 # for tmuxx
